@@ -1,5 +1,5 @@
 export interface postLoginParam {
-  email: string;
+  account_id: string;
   password: string;
 }
 

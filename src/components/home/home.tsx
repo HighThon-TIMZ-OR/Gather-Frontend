@@ -5,7 +5,6 @@ import search from "../../asset/common/search.svg";
 const Home = () => {
   return (
     <>
-      <Header />
       <HomeSearchBox>
         <HomeSearchBar />
         <HomeSearchImg src={search} />

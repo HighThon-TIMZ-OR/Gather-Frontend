@@ -11,16 +11,15 @@ import {
   AuthSmallTitle,
   AuthTitleWrap,
 } from "./styled";
-import signup from "../../asset/auth/signup.svg";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useSendSignupMutation } from "../../queries/auth/signup.query";
-import token from "../../lib/token/token";
-import { ACCESS_KEY } from "../../constants/token/token";
-import { postSignupParam } from "../../repositories/auth/auth.param";
-import useLogin from "../../hooks/useLogin";
+import { useSendSignupMutation } from "../../../queries/auth/signup.query";
+import token from "../../../lib/token/token";
+import { ACCESS_KEY } from "../../../constants/token/token";
+import { postSignupParam } from "../../../repositories/auth/auth.param";
+import useLogin from "../../../hooks/useSignup";
 
-const Login = () => {
+const Signup = () => {
   const navigate = useNavigate();
   const {
     register,
@@ -88,4 +87,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;

@@ -81,6 +81,8 @@ const AuthBackground = styled.div`
   display: flex;
   align-items: center;
   background-image: url(${signup});
+  background-size: 100%;
+  height: 100vh;
 `;
 
 const AuthLeftWrap = styled.div`

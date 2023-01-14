@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { ACCESS_KEY } from "../../../constants/token/token";
-import useLogin from "../../../hooks/useLogin";
+import useLogin from "../../../hooks/auth/useLogin";
 import token from "../../../lib/token/token";
 import { useSendLoginMutation } from "../../../queries/auth/signup.query";
 import { postLoginParam } from "../../../repositories/auth/auth.param";
@@ -19,6 +19,7 @@ const Login = () => {
         onSuccess: ({ token: accessToken }) => {
           token.setToken(ACCESS_KEY, accessToken);
           navigate("/");
+          window.location.reload();
         },
         onError: (error: any) => {
           window.alert(error.response.data.details);
@@ -49,12 +50,14 @@ const Login = () => {
               placeholder="아이디를 입력해주세요"
               type="text"
               name="input_id"
+              ref={idRef}
             />
             <AuthInputName>비밀번호</AuthInputName>
             <AuthInput
               placeholder="비밀번호를 입력해주세요"
               type="password"
               name="input_pw"
+              ref={pwRef}
             />
           </AuthInputWrap>
           <AuthFormBtn>로그인</AuthFormBtn>

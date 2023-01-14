@@ -17,7 +17,7 @@ import { useSendSignupMutation } from "../../../queries/auth/signup.query";
 import token from "../../../lib/token/token";
 import { ACCESS_KEY } from "../../../constants/token/token";
 import { postSignupParam } from "../../../repositories/auth/auth.param";
-import useLogin from "../../../hooks/useSignup";
+import useLogin from "../../../hooks/auth/useSignup";
 
 const Signup = () => {
   const navigate = useNavigate();

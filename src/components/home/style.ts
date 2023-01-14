@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const HomeContainer = styled.div`
+  width: 100%;
+  height: 100vh;
+
+  background-color: #f7f6ff;
+`;
+
 export const HomeSearchBar = styled.input`
   width: 100%;
   height: 100%;
@@ -16,10 +23,11 @@ export const HomeSearchBar = styled.input`
 export const HomeSearchBox = styled.div`
   position: relative;
   width: 940px;
-  height: 60px;
+  height: 80px;
   margin: 0 auto;
-  margin-top: 46px;
+  padding-top: 46px;
   display: flex;
+  flex-wrap: wrap;
 `;
 
 export const HomeSearchImg = styled.img`
@@ -29,3 +37,13 @@ export const HomeSearchImg = styled.img`
   top: 17px;
   right: 78px;
 `;
+
+export const ItemContainer = styled.div`
+  padding: 50px;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  z-index: 3;
+`;
+
+export const ItemPeople = styled.p``;

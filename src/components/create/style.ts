@@ -16,7 +16,7 @@ export const CreateTitle = styled.h2`
 
 export const CreateTable = styled.div`
   width: 820px;
-  height: 500px;
+  height: 550px;
 
   display: flex;
   justify-content: center;
@@ -33,11 +33,14 @@ export const CreateTableTitleWrap = styled.div`
   height: 111px;
   margin-left: 81px;
   margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const CreateTableTitle = styled.label`
   font-size: 24px;
   color: #ffffff;
+  margin-top: 30px;
 `;
 
 export const CreateTableTitleInput = styled.input`
@@ -47,6 +50,7 @@ export const CreateTableTitleInput = styled.input`
   outline: none;
   border: none;
   border-radius: 10px;
+  padding: 20px;
 `;
 
 export const CreateTableBtn = styled.button`
@@ -62,4 +66,9 @@ export const CreateTableBtn = styled.button`
   &:hover {
     background-color: #12d18e;
   }
+  margin-bottom: 10px;
+`;
+
+export const CreateTableSelector = styled.select`
+  width: 120px;
 `;

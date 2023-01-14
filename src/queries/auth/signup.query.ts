@@ -17,5 +17,6 @@ export const useSendLoginMutation = () => {
   const mutation = useMutation(({ account_id, password }: postLoginParam) =>
     loginRepository.sendLogin({ account_id, password })
   );
+  console.log(mutation);
   return mutation;
 };

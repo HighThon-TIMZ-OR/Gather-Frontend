@@ -1,9 +1,21 @@
+import React from 'react';
 import Header from "../common/header/Index";
 import styled from 'styled-components';
 import profile from "../../asset/auth/profile.svg";
+import axios from 'axios';
+import useTokenCheck from '../../constants/token/useTokenCheck';
+import token from "../../lib/token/token"
+import { ACCESS_KEY } from '../../constants/token/token';
+import CONFIG from "../../config/config.json"
 
 const Mypage = ()=>{
-    
+    const useGetMyInfo = async () => {
+        await axios.get(`${CONFIG.server}/users/my`, {
+            
+        }).then((Response) => {
+            token.setToken(ACCESS_KEY, "access-token")
+        })
+    }
 
     return (
         <>

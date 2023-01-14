@@ -59,4 +59,7 @@ export const CreateTableBtn = styled.button`
   font-size: 18px;
   border-radius: 10px;
   border: none;
+  &:hover {
+    background-color: #12d18e;
+  }
 `;

@@ -29,7 +29,7 @@ const Signup = () => {
 
   const { idRef, pwRef, nameRef } = useLogin();
 
-  const onSubmit = async ({ account_id, name, password }: postSignupParam) => {
+  const onSubmit = ({ account_id, name, password }: postSignupParam) => {
     console.log(account_id);
     sendSignupMutation.mutateAsync(
       { account_id, name, password },

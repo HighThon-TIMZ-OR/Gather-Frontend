@@ -5,15 +5,15 @@ import useLogin from "../../../hooks/auth/useLogin";
 import token from "../../../lib/token/token";
 import { useSendLoginMutation } from "../../../queries/auth/signup.query";
 import { postLoginParam } from "../../../repositories/auth/auth.param";
-
+import signup from "../../../asset/logo/signup.svg";
 const Login = () => {
   const navigate = useNavigate();
   const { idRef, pwRef } = useLogin();
   const sendLoginMutation = useSendLoginMutation();
 
-  const onSubmit = async ({ account_id, password }: postLoginParam) => {
+  const onSubmit = ({ account_id, password }: postLoginParam) => {
     console.log(account_id);
-    sendLoginMutation.mutateAsync(
+    sendLoginMutation.mutate(
       { account_id, password },
       {
         onSuccess: ({ token: accessToken }) => {
@@ -80,6 +80,7 @@ const AuthBackground = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
+  background-image: url(${signup});
 `;
 
 const AuthLeftWrap = styled.div`

@@ -21,11 +21,7 @@ const Create = () => {
   const { nameRef, hobbyRef, max_Ref } = useCreate();
   const createMutation = useCreateMutation();
 
-  const onSubmit = async ({
-    title,
-    hobby_type,
-    max_people,
-  }: createHobbyParam) => {
+  const onSubmit = ({ title, hobby_type, max_people }: createHobbyParam) => {
     createMutation.mutateAsync(
       { title, hobby_type, max_people },
       {
